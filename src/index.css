@@ -98,6 +98,7 @@ body {
   padding: 3px 7px;
   font-size: 17px;
   background-color: #ebcfcf;
+  border-radius: 10px;  
 }
 
 .form-control-check {
@@ -122,4 +123,15 @@ body {
 a {
   font-size: 17px;
   padding: 10px 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  background-color: #ebcfcf;
+  border-radius: 10px;
+  height: 250px;
 }

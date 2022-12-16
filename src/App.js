@@ -6,11 +6,7 @@ import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import About from './components/About'
 
-
-const URL_ADDRESS = 'http://localhost:5001/tasks';
-const URL_HEADER = {
-  'Accept': 'application/json',
-}
+const URL_ADDRESS = 'http://localhost:5001/tasks'
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -27,35 +23,43 @@ const App = () => {
 
   // Fetch Tasks
   const fetchTasks = async () => {
-    const res = await fetch(`${URL_ADDRESS}`)
+    const res = await fetch(URL_ADDRESS)
     const data = await res.json()
+
     return data
   }
 
-
-  // Fetch Tasks
+  // Fetch Task
   const fetchTask = async (id) => {
     const res = await fetch(`${URL_ADDRESS}/${id}`)
     const data = await res.json()
+
     return data
   }
 
   // Add Task
   const addTask = async (task) => {
-    const res = await fetch(`${URL_ADDRESS}`, {
+    const res = await fetch(URL_ADDRESS, {
       method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
       body: JSON.stringify(task),
     })
+
     const data = await res.json()
 
     setTasks([...tasks, data])
+
+    // const id = Math.floor(Math.random() * 10000) + 1
+    // const newTask = { id, ...task }
+    // setTasks([...tasks, newTask])
   }
 
   // Delete Task
   const deleteTask = async (id) => {
     const res = await fetch(`${URL_ADDRESS}/${id}`, {
       method: 'DELETE',
-      headers: URL_HEADER,
     })
     //We should control the response status to decide if we will change the state or not.
     res.status === 200
