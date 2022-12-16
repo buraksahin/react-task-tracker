@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #483d8b;
 }
 
 .container {
@@ -15,30 +16,33 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 11px solid rgb(74, 15, 147);
+  border-radius: 25px;
   padding: 30px;
-  border-radius: 5px;
+  background-color:rgb(246, 225, 245)
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  color:rgb(81, 66, 196)
 }
 
 .btn {
   display: inline-block;
   background: #000;
-  color: #fff;
+  color: rgb(67, 63, 66);
   border: none;
-  padding: 10px 20px;
+  padding: 2px 6px;
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 22px;
   font-family: inherit;
+  border: 5px solid rgb(74, 15, 147);
 }
 
 .btn:focus {
@@ -52,6 +56,9 @@ body {
 .btn-block {
   display: block;
   width: 100%;
+  background-color: aquamarine;
+  border-radius: 5px;
+  border: 5px solid rgb(74, 15, 147);
 }
 
 .task {
@@ -81,6 +88,7 @@ body {
 
 .form-control label {
   display: block;
+  font-size: 17px;
 }
 
 .form-control input {
@@ -89,6 +97,7 @@ body {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  background-color: #ebcfcf;
 }
 
 .form-control-check {
@@ -103,10 +112,14 @@ body {
 
 .form-control-check input {
   flex: 2;
-  height: 20px;
+  height: 25px;
 }
 
-footer {
-  margin-top: 30px;
+.footer {
   text-align: center;
+}
+
+a {
+  font-size: 17px;
+  padding: 10px 10px;
 }
